@@ -10,70 +10,73 @@
   </style>
 </head>
 <body>
-  <a-scene background="color: #ECECEC">
+  <a-scene background="color: #87CEEB"> <!-- Cielo azul claro -->
 
     <!-- Cámara -->
-    <a-entity id="cameraRig" position="0 1.6 7">
+    <a-entity id="cameraRig" position="0 1.6 9">
       <a-entity camera look-controls wasd-controls></a-entity>
     </a-entity>
 
     <!-- Luces -->
-    <a-entity light="type: ambient; intensity: 0.6"></a-entity>
-    <a-entity light="type: directional; intensity: 0.8" position="1 2 1"></a-entity>
+    <a-entity light="type: ambient; intensity: 0.7"></a-entity>
+    <a-entity light="type: directional; intensity: 0.9" position="1 3 2"></a-entity>
 
-    <!-- Suelo -->
-    <a-plane rotation="-90 0 0" width="12" height="12" color="#7BC8A4" position="0 0 0"></a-plane>
+    <!-- Suelo nevado -->
+    <a-circle rotation="-90 0 0" radius="20" color="#FFFFFF" position="0 0 0"></a-circle>
 
-    <!-- Esferas del muñeco -->
-    <a-sphere position="0 1 0" radius="1" color="#FFFFFF" shadow></a-sphere>
-    <a-sphere position="0 2.5 0" radius="0.7" color="#FFFFFF" shadow></a-sphere>
-    <a-sphere position="0 3.5 0" radius="0.5" color="#FFFFFF" shadow></a-sphere>
+    <!-- Esferas del muñeco (blanco azulado) -->
+    <a-sphere position="0 1 0" radius="1.2" color="#F0F8FF" shadow></a-sphere>
+    <a-sphere position="0 2.6 0" radius="0.85" color="#F0F8FF" shadow></a-sphere>
+    <a-sphere position="0 3.9 0" radius="0.6" color="#F0F8FF" shadow></a-sphere>
 
     <!-- Nariz (cono) -->
-    <a-cone position="0 3.5 0.55" radius-bottom="0.1" radius-top="0.01" height="0.5"
+    <a-cone position="0 3.9 0.65" radius-bottom="0.1" radius-top="0.01" height="0.6"
             color="orange" rotation="90 0 0" shadow></a-cone>
 
     <!-- Ojos -->
-    <a-sphere position="-0.15 3.6 0.45" radius="0.05" color="black"></a-sphere>
-    <a-sphere position="0.15 3.6 0.45" radius="0.05" color="black"></a-sphere>
+    <a-sphere position="-0.18 4 0.5" radius="0.06" color="black"></a-sphere>
+    <a-sphere position="0.18 4 0.5" radius="0.06" color="black"></a-sphere>
 
     <!-- Sonrisa -->
-    <a-sphere position="-0.2 3.4 0.45" radius="0.04" color="black"></a-sphere>
-    <a-sphere position="-0.1 3.35 0.48" radius="0.04" color="black"></a-sphere>
-    <a-sphere position="0 3.33 0.5" radius="0.04" color="black"></a-sphere>
-    <a-sphere position="0.1 3.35 0.48" radius="0.04" color="black"></a-sphere>
-    <a-sphere position="0.2 3.4 0.45" radius="0.04" color="black"></a-sphere>
+    <a-sphere position="-0.25 3.8 0.55" radius="0.04" color="black"></a-sphere>
+    <a-sphere position="-0.12 3.75 0.58" radius="0.04" color="black"></a-sphere>
+    <a-sphere position="0 3.73 0.6" radius="0.04" color="black"></a-sphere>
+    <a-sphere position="0.12 3.75 0.58" radius="0.04" color="black"></a-sphere>
+    <a-sphere position="0.25 3.8 0.55" radius="0.04" color="black"></a-sphere>
 
     <!-- Botones -->
-    <a-sphere position="0 2.7 0.68" radius="0.06" color="black"></a-sphere>
-    <a-sphere position="0 2.5 0.7" radius="0.06" color="black"></a-sphere>
-    <a-sphere position="0 2.3 0.68" radius="0.06" color="black"></a-sphere>
+    <a-sphere position="0 2.9 0.8" radius="0.07" color="black"></a-sphere>
+    <a-sphere position="0 2.6 0.82" radius="0.07" color="black"></a-sphere>
+    <a-sphere position="0 2.3 0.8" radius="0.07" color="black"></a-sphere>
 
     <!-- Brazos -->
-    <a-cylinder position="-1.2 2 0" radius="0.05" height="1.5" rotation="0 0 -45" color="#8B5A2B"></a-cylinder>
-    <a-cylinder position="1.2 2 0" radius="0.05" height="1.5" rotation="0 0 45" color="#8B5A2B"></a-cylinder>
+    <a-cylinder position="-1.5 2.5 0" radius="0.05" height="1.5" rotation="0 0 -30" color="#8B5A2B"></a-cylinder>
+    <a-cylinder position="1.5 2.5 0" radius="0.05" height="1.5" rotation="0 0 30" color="#8B5A2B"></a-cylinder>
 
-    <!-- Sombrero -->
-    <a-cylinder position="0 3.9 0" radius="0.65" height="0.05" color="black"></a-cylinder>
-    <a-cylinder position="0 4.2 0" radius="0.35" height="0.6" color="black"></a-cylinder>
+    <!-- Sombrero con banda roja -->
+    <a-cylinder position="0 4.5 0" radius="0.75" height="0.08" color="black"></a-cylinder>
+    <a-cylinder position="0 4.9 0" radius="0.45" height="0.7" color="black"></a-cylinder>
+    <a-cylinder position="0 4.9 0" radius="0.47" height="0.1" color="red"></a-cylinder>
 
     <!-- Bufanda -->
-    <a-torus position="0 3.1 0" radius="0.5" radius-tubular="0.07" rotation="90 0 0" color="red"></a-torus>
-    <a-box position="0.2 2.6 0.2" depth="0.05" height="0.8" width="0.2" color="red"></a-box>
+    <a-torus position="0 3.3 0" radius="0.55" radius-tubular="0.08" rotation="90 0 0" color="red"></a-torus>
+    <a-box position="0.25 2.7 0.2" depth="0.05" height="0.9" width="0.25" color="green"></a-box>
 
-    <!-- Trineo al lado derecho -->
-    <!-- Patines -->
-    <a-cylinder position="3 0.3 -1" radius="0.05" height="2.5" rotation="90 0 0" color="#8B0000"></a-cylinder>
-    <a-cylinder position="3 0.3 1" radius="0.05" height="2.5" rotation="90 0 0" color="#8B0000"></a-cylinder>
+    <!-- Trineo con llantas -->
     <!-- Base -->
-    <a-box position="3 0.7 0" depth="2" height="0.1" width="1.5" color="#CD853F"></a-box>
-    <!-- Soportes -->
-    <a-box position="3 0.9 -0.8" depth="0.1" height="0.4" width="1.5" color="#CD853F"></a-box>
-    <a-box position="3 0.9 0.8" depth="0.1" height="0.4" width="1.5" color="#CD853F"></a-box>
+    <a-box position="3 0.8 0" depth="2" height="0.15" width="1.6" color="#CD853F"></a-box>
+    <!-- Soportes laterales -->
+    <a-box position="3 1 -0.8" depth="0.1" height="0.4" width="1.6" color="#CD853F"></a-box>
+    <a-box position="3 1 0.8" depth="0.1" height="0.4" width="1.6" color="#CD853F"></a-box>
+    <!-- Llantas -->
+    <a-sphere position="2.3 0.35 -0.9" radius="0.35" color="black"></a-sphere>
+    <a-sphere position="3.7 0.35 -0.9" radius="0.35" color="black"></a-sphere>
+    <a-sphere position="2.3 0.35 0.9" radius="0.35" color="black"></a-sphere>
+    <a-sphere position="3.7 0.35 0.9" radius="0.35" color="black"></a-sphere>
 
     <!-- Texto -->
-    <a-entity position="0 5.5 0">
-      <a-text value="Juan Sebastian Martinez Garzon - 1804016" align="center" color="#222" width="8"></a-text>
+    <a-entity position="0 6 0">
+      <a-text value="Juan Sebastian Martinez Garzon - 1804016" align="center" color="#222" width="10"></a-text>
     </a-entity>
 
   </a-scene>
